@@ -4,6 +4,7 @@
 @import "./components/header.scss";
 @import "./components/banner.scss";
 @import "./components/cases.scss";
+@import "./components/navigation.scss";
 
 body,
 html {
@@ -140,5 +141,24 @@ html {
         }
       }
     }
+  }
+}
+
+//---------------------------------------------------------------------------------------------------
+// ---------- App (esconder nav atras y hacer toda la App para abajo cuando se muestre) -------------
+// --------------------------------------------------------------------------------------------------
+.App{
+  z-index: 2; //poner toda la app encima del nav para esconderlo
+  transform: translateY(0);
+  position: relative;
+  // display: none;
+}
+.page{
+  height: 100vh;
+  width: 100%;
+  background: $white;
+  .row{
+    display: flex;
+    align-items: center;
   }
 }
