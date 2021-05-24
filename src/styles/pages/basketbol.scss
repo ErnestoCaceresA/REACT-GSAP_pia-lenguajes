@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+
+.basketbol{
+    position: relative;
+    top: 130px;
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 45px;
+        @include media('<=tablet'){
+            flex-direction: column;
+        }
+        .first-row{
+            min-width: 25vw;
+            width: 35vw;
+            @include media('<=tablet'){
+                width: 100%;
+            }
+            .title{
+                display: flex;
+                justify-content: center;
+                h2{
+                    font-size: 45px;
+                    @include media('<=tablet'){
+                        font-size: 20px;
+                    }
+                }
+            }
+            .description{
+                h4{
+                    font-family: 'Pattaya', sans-serif;
+                    font-size: 19px;
+                    font-weight: 500;
+                    letter-spacing: 1px;
+                }
+            }
+            .content{
+                p{
+                    font-size: 18px;
+                }
+            }
+        }
+        .second-row{
+            // min-width: 35vw;
+            // width: 40vw;
+            .image-container{
+                // border: 1px solid $black;
+                height: 100%;
+                width: 40vw; 
+                position: relative;
+                .first-image{
+                    position: absolute;
+                    border-radius: 7px;
+                }
+                .second-image{
+                    position: absolute;
+                    top: 6.2rem;
+                    left: 16rem;
+                    border-radius: 7px;
+                }
+                img{
+                    width: 300px;
+                }
+            }
+        }
+    }
+    .Mas-informacion{
+        margin: 48px;
+        h3{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 1px;
+        }
+        p{
+            font-size: 17px;
+        }
+        .posicion-jugadores-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            ul{
+                align-self: center;
+                li{
+    
+                }
+            }
+            .image-container{
+                img{
+                    width: 400px;
+                }
+            }
+        }
+        .videos-container{
+            ul{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                li{
+                    list-style: none;
+                    border: 1px solid $black;
+                    padding: 15px;
+                    border-radius: 0 5px 0 5px;
+                    margin-bottom: 30px;     
+                    font-size: 20px;
+                    
+                    transition: .8s;
+                    a{
+                        text-decoration: none;
+                        color: $black;
+
+                        transition: .8s;
+                    }
+                    &:hover{
+                        background-color: #444;
+                        border-radius: 0;
+                        a{
+                            color: $white;  
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}

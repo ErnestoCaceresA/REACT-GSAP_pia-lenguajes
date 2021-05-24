@@ -132,13 +132,20 @@ function Header({history, dimensions}) {
                     overflow: 'auto'
                 }
             }).to('nav', { //volver a poner el nav en display:none para desaparecerlo por completo y que no consuma recursos
+                duration: 0,
                 css: {
                     display: "none"
                 }
             })
+            // .to('.App', {
+            //     css: {
+            //         zIndex: 30
+            //     }
+            // })
 
         }
     }, [menuState.menuOpened])
+
 
     return (
         <div className="header">
