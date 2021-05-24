@@ -68,7 +68,7 @@ const Futbol = () => {
                             <div className="futbol-content-inner" ref={el => content = el}>
                                 <h1>
                                     <div className="futbol-content-line">
-                                        <div className="futbol-content-line-inner">Futbol soccer.</div>
+                                        <div className="futbol-content-line-inner">FUTBOL SOCCER.</div>
                                     </div>
                                     <div className="futbol-content-line">
                                         <div className="futbol-content-line-inner">"Cada partido se juega</div>

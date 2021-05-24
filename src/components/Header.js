@@ -27,7 +27,7 @@ function Header({history, dimensions}) {
 
             tl.to('.App', {
                 duration: 0.7,
-                y: dimensions.width <= 654 ? '90vh' : dimensions.height / 1.5, //si esta en dimensiones de movil abrir el menu a 90vh, si esta en desktop abrirlo solo a la mitad 50vh
+                y: dimensions.width <= 654 ? '95vh' : dimensions.height / 1.4, //si esta en dimensiones de movil abrir el menu a 90vh, si esta en desktop abrirlo solo a la mitad 50vh
                 ease: "expo.inOut"
             }).to('.hamburger-menu span', { //encojer boton de abrir menu y desaparecerlo
                 duration: .6,
