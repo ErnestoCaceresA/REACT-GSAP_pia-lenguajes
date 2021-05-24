@@ -1,12 +1,40 @@
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
+import {TweenMax, TimelineLite, Power3} from 'gsap'
 
 const Basketbol = () => {
+    
+    //variables globales
+    let images = useRef(null)
+    let firstRow = useRef(null)
+    let containerDos = useRef(null)
+
+
+    let tl = new TimelineLite({delay: 0.27})
+
+    useEffect(() => {
+        //variables
+        const firstImage = images.firstElementChild;
+        const secondImage = images.children[1]
+        // const secondContainer = container.children[1]
+
+        tl.from(firstImage, 1.5, { y: 500, ease: Power3.easeOut })
+        .from(firstImage, 1.5, { scale: 1.6, ease: Power3.easeOut },0.2)
+        .from(secondImage, 1.5, { y: 500, ease: Power3.easeOut }, 0.3)
+        .from(secondImage, 1.5, { scale: 1.6, ease: Power3.easeOut },0.2)
+        .from(firstRow, 1.6, {opacity: 0, ease: Power3.easeOut}, .5)
+        .from(firstRow, 1.6, {translateX: 300, ease: Power3.easeOut}, .3)
+        .from(containerDos, 1.6, {translateY: -200, opacity: 0 ,  ease: Power3.easeOut}, .3)
+
+    }, []);
+
+    
+    
     return (
         <div className="page">
             <div className="basketbol">
                 {/* PRIMER FILA */}
                 <div className="container">
-                    <div className="first-row">
+                    <div className="first-row" ref={el => firstRow = el}>
                         <div className="title">
                             <h2>
                                 Basquetbol.
@@ -20,14 +48,14 @@ const Basketbol = () => {
                         </div>
                     </div>
                     <div className="second-row">
-                        <div className="image-container">
+                        <div className="image-container" ref={el => images = el}>
                             <img className="first-image" src="https://elceo.com/wp-content/uploads/2021/04/basketball.jpeg" alt="" />
                             <img className="second-image" src="https://www.competize.com/blog/wp-content/uploads/2020/11/basquetbol-historia-origen-reglas-fundamentos.jpg" alt="" />
                         </div>
                     </div>
                 </div>
                 {/* SEGUNDA FILA */}
-                <div className="container">
+                <div className="container" ref={el => containerDos = el}>
                     <div className="second-row">
                         <div className="image-container">
                             <img className="first-image" src="http://www.fiba.basketball/images.fiba.com/Graphic/0/8/D/A/kDeniMsSbk2Ii2nKUbnaMg.jpg?v=20190917204445770" alt="" />
