@@ -37,27 +37,27 @@ const Navigation = () => {
                         <div className="nav-label">Mas informacion</div>
                         <div className="nav-infos">
                             <ul className="nav-info">
-                                <li className="nav-info-label">Label sin asignar</li>
+                                <li className="nav-info-label">Noticias</li>
                                 <li>
-                                    <NavLink to="#">
-                                        NavLink sin asignar
-                                    </NavLink>
+                                    <a href="https://www.mundodeportivo.com/futbol" target="_BLANK">
+                                        Futbol - noticias recientes
+                                    </a>
                                 </li>
                                 <li>
-                                    <NavLink to="#">
-                                        NavLink sin asignar Dos
-                                    </NavLink>
+                                    <a href="https://www.informador.mx/basquetbol-t243" target="_BLANK">
+                                        Basketbol - ultimo momento
+                                    </a>
                                 </li>
                             </ul>
                             <ul className="nav-info">
-                                <li className="nav-info-label">Label sin asignar</li>
-                                <li>Route du Jura 49</li>
-                                <li>1700 Fribourg</li>
-                                <li>Switzer land</li>
+                                <li className="nav-info-label">Mas Noticias.</li>
+                                <li>.-De ultimo momento-.</li>
+                                <li><a href="https://cnnespanol.cnn.com/category/atletismo/" target="_BLANK">Atletismo - noticias</a></li>
+                                <li><a href="https://www.mundodeportivo.com/tenis" target="_BLANK">Tenis - Mundo deportivo</a></li>
                             </ul>
                             <ul className="nav-info">
-                                <li className="nav-info-label">Phone</li>
-                                <li>+41 (0) 75 510 28 70</li>
+                                <li className="nav-info-label">Articulos</li>
+                                <li><a href="https://blogthinkbig.com/tag/deporte" target="_BLANK">Articulo de Deportes.</a></li>
                             </ul>
                             <ul className="nav-info">
                                 <li className="nav-info-label">Legal</li>
